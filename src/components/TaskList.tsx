@@ -16,6 +16,8 @@ export function TaskList() {
 
   function handleCreateNewTask() {
 
+    if(!newTaskTitle) return;
+
     const exists = tasks.filter( task => task.title === newTaskTitle )
 
     if(exists.length > 0){
